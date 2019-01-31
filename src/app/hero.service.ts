@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
 import { Observable, of } from 'rxjs';
+import { MessageService } from './message.service';
 
 // This marks the class as one that participates in the dependency injection system.The HeroService class is going to provide an injectable service, and it can also have its own injected dependencies.
 @Injectable({
@@ -10,10 +11,11 @@ import { Observable, of } from 'rxjs';
 })
 export class HeroService {
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   getHeroes(): Observable<Hero[]> {
     // In this tutorial, HeroService.getHeroes() will return an Observable in part because it will eventually use the Angular HttpClient.get method to fetch the heroes and HttpClient.get() returns an Observable.
+    this.messageService.add('HeroService: fetched heroes');
     return of(HEROES);
   }
 }

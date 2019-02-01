@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessageComponent } from './message/message.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   // Every component must be declared in exactly one NgModule.
@@ -14,7 +14,7 @@ import { MessageComponent } from './message/message.component';
     AppComponent,
     HeroComponent,
     HeroDetailComponent,
-    MessageComponent
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

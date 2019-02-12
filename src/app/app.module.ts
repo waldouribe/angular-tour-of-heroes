@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   // Every component must be declared in exactly one NgModule.
@@ -14,7 +15,8 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     HeroComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
